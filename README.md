@@ -48,7 +48,7 @@ define('public/javascripts/dep2', function(){
 define('public/javascripts/main', [
     'public/javascripts/dep1',
     'public/javascripts/dep2'
-], function(){
+], function(dep1, dep2){
     dep1();
     dep2();
     console.log('Hola');
