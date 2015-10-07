@@ -38,7 +38,7 @@ require(['public/javascripts/main'], function(main){
 ## If there are multiple define modules in one file
 ## Set ID in each define
 ```shell
-// public/javascripts/main.js
+// public/javascripts/app.js
 define('public/javascripts/dep1', function(){
     console.log('dep1');
 });
