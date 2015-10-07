@@ -30,7 +30,7 @@ define([
 
 ```shell
 // public/javascripts/app.js
-require(['public/javascripts/main.js'], function(main){
+require(['public/javascripts/main'], function(main){
     main();
 });
 ```
@@ -52,5 +52,8 @@ define('public/javascripts/main', [
     dep1();
     dep2();
     console.log('Hola');
+});
+require(['public/javascripts/main'], function(main){
+    main();
 });
 ```
