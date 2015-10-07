@@ -90,20 +90,9 @@ var injector = (function injector(){
 
     /**
      * Return global context
-     * By default it s window
      */
-    injector.getGlobalContext = function getGlobalContext() {
+    function getGlobalContext() {
         return window;
-    };
-    injector.getDependencie = function(dep){
-        var depFound;
-        for(var _kDep in injector._dependencies){
-            if(injector._dependencies[_kDep].value._metadata.name === dep._metadata.name){
-                depFound = injector._dependencies[_kDep].value;
-                break;
-            }
-        }
-        return depFound;
     };
 
     /**
@@ -218,7 +207,7 @@ var injector = (function injector(){
                     var name = _getModuleName(file);
                     // non AMD module
                     if(typeof file !== 'string') {
-                        injector.define(name, injector.getGlobalContext()[name]);
+                        injector.define(name, getGlobalContext()[name]);
                     }
                     Logger('[OK] Load: ' + _getModuleUrl(file));
                     return resolve(injector._dependencies[name]);
