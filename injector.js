@@ -34,13 +34,13 @@ var injector = (function injector(){
             if(Array.isArray(name)) {
                 value = deps;
                 deps = name;
-                name = _getModuleName(injector.getPathName());
+                name = _getModuleName(getPathName());
                 allParametersSet = true;
             }
             // just function
             if(typeof name === 'function' && !allParametersSet) {
                 value = name;
-                name = _getModuleName(injector.getPathName());
+                name = _getModuleName(getPathName());
                 deps = [];
                 allParametersSet = true;
             }
@@ -263,10 +263,8 @@ var injector = (function injector(){
     }
     /**
      * Get name for module
-     * If browser, use file name
-     * Else must rewrite getPathName
      */
-    injector.getPathName = function getPathName() {
+    function getPathName() {
         var name = decodeURI(document.currentScript.src);
         return _clearName(name);
     };
