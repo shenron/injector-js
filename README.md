@@ -1,5 +1,5 @@
 # injector-js 
-Resolve of AMD modules
+AMD resolution modules
 
 # Usage 
 ```shell
@@ -35,7 +35,7 @@ require(['public/javascripts/main.js'], function(main){
 });
 ```
 
-## If in one file there are multiple define module
+## If there are multiple define modules in one file
 ## Set ID in each define
 ```shell
 // public/javascripts/main.js
