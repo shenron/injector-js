@@ -2,6 +2,24 @@
 AMD resolution modules
 
 # Usage 
+After injector.js loaded, set its funtions in global context
+
+```shell
+<html>
+    <head>
+        <script src="injector.js"></script>
+        <script>
+            window.onload = function(){
+                var define = injector.define;
+                var require = injector.require;
+
+                // Ready for next
+            };
+        </script>
+    <head>
+</html>
+```
+
 ```shell
 // public/javascripts/dep1.js
 define(function(){
