@@ -2,7 +2,7 @@
 AMD resolution modules
 
 # Usage 
-After injector.js loaded, set its funtions in global context
+After injector.js ready, set funtions in global context
 
 ```shell
 <html>
@@ -53,7 +53,7 @@ require(['public/javascripts/main'], function(main){
 });
 ```
 
-## If there are multiple define modules in one file
+## If there are multiple define modules in same file
 ## Set ID in each define
 ```shell
 // public/javascripts/app.js
